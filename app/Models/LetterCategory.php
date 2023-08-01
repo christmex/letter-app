@@ -12,4 +12,9 @@ class LetterCategory extends Model
     use HasFactory;
 
     protected $fillable = ['letter_category_name'];
+    
+    public function setLetterCategoryNameAttribute($value)
+    {
+        $this->attributes['letter_category_name'] = ucwords($value);
+    }
 }

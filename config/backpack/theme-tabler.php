@@ -22,7 +22,7 @@ return [
      * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
      * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
      */
-    'layout' => 'horizontal_overlap',
+    'layout' => 'horizontal',
 
     /**
      * Pick a login page layout.
@@ -63,7 +63,7 @@ return [
         /**
          * The color mode used by default.
          */
-        'defaultColorMode' => 'system', // system, light, dark
+        'defaultColorMode' => 'dark', // system, light, dark
 
         /**
          * When true, a switch is displayed to let admins choose their favorite theme mode.
@@ -91,7 +91,7 @@ return [
         /**
          * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.
          */
-        'doubleTopBarInHorizontalLayouts' => false,
+        'doubleTopBarInHorizontalLayouts' => true,
     ],
 
     /**

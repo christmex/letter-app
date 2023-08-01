@@ -24,8 +24,9 @@ class LetterCategoryRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->get('id') ?? request()->route('id');
         return [
-            // 'name' => 'required|min:5|max:255'
+            'letter_category_name' => 'required|max:255|unique:letter_categories,letter_category_name,'.$id
         ];
     }
 
