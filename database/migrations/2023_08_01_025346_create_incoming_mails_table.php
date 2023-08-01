@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('letter_category_id')->constrained();
             $table->string('incoming_mail_sender');
             $table->string('incoming_mail_subject');
-            $table->longText('incoming_mail_file');
+            $table->longText('incoming_mail_file')->nullable();
             $table->string('incoming_mail_addressed_to');
             $table->timestamps();
         });
