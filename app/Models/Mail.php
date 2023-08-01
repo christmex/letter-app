@@ -37,4 +37,9 @@ class Mail extends Model
     public function letterCategory(){
         return $this->belongsTo(LetterCategory::class);
     }
+
+    public function createOutcomingMailBtn()
+    {
+        return '<a class="btn btn-secondary" href="'.route('mail.create',['sender' => env('SCHOOL_NAME')]).'" data-toggle="tooltip" title="Add outcoming mail"><i class="la la-plus"></i> Add outcoming mail</a>';
+    }
 }

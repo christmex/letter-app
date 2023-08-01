@@ -45,6 +45,7 @@ class MailCrudController extends CrudController
             'entity' => 'letterCategory', // the relationship name in your Model
             'attribute' => 'letter_category_name',
         ]);
+        CRUD::addButtonFromModelFunction('top', 'createOutcomingMailBtn', 'createOutcomingMailBtn', 'beginning');
         CRUD::setFromDb(); // set columns from db columns.
         CRUD::modifyColumn('mail_file',[
             'name'   => 'mail_file',
@@ -72,6 +73,13 @@ class MailCrudController extends CrudController
         ]);
 
         CRUD::setFromDb(); // set fields from db columns.
+        if(request('sender')){
+            CRUD::addField([
+                'name' => 'mail_sender',
+                'type' => 'hidden',
+                'default' => env('SCHOOL_NAME'),
+            ]);
+        }
         CRUD::field('mail_file')
             ->type('upload')
             ->after('mail_addressed_to')

@@ -3,4 +3,4 @@
 
 <x-backpack::menu-item title="Letter categories" icon="la la-mail-bulk" :link="backpack_url('letter-category')" />
 <!-- <x-backpack::menu-item title="Incoming mails" icon="la la-question" :link="backpack_url('incoming-mail')" /> -->
-<x-backpack::menu-item title="Mails" icon="la la-envelope-open" :link="backpack_url('mail')" />
+<x-backpack::menu-item title="Incoming Mails" icon="la la-envelope-open" :link="backpack_url('mail')" />
